@@ -53,17 +53,17 @@ routes = [politics, chitchat, time_route]
 
 
 
-from dotenv import load_dotenv
-load_dotenv()
-encoder = OpenAIEncoder()
-rl = RouteLayer(encoder=encoder, routes=routes)
-out = rl("how's the weather today?")
-print(type(out))
-print(out)
-print(out.name)
-print(out.function_call)
-print(out.similarity_score)
-print(out.trigger)
+# from dotenv import load_dotenv
+# load_dotenv()
+# encoder = OpenAIEncoder()
+# rl = RouteLayer(encoder=encoder, routes=routes)
+# out = rl("how's the weather today?")
+# print(type(out))
+# print(out)
+# print(out.name)
+# print(out.function_call)
+# print(out.similarity_score)
+# print(out.trigger)
 
 
 
@@ -82,10 +82,11 @@ llm = LlamaCppLLM(name="Mistral-7B-v0.2-Instruct", llm=_llm, max_tokens=None)
 rl = RouteLayer(encoder=encoder, routes=routes, llm=llm)
 
 
-# out = rl("what is the time in Beijing?")
-# print(out)
-# print(type(out.function_call))
-# print(out.function_call)
-# print(out.function_call['timezone'])
-# print(get_time(**out.function_call))
+
+out = rl("what is the time in Beijing?")
+print(out)
+print(type(out.function_call))
+print(out.function_call)
+print(out.function_call['timezone'])
+print(get_time(**out.function_call))
 
