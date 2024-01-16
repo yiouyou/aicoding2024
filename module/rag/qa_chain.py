@@ -1,6 +1,6 @@
-from module._log import logger_rag
+from .._log import logger_rag
 
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import (
     PromptTemplate,
@@ -16,12 +16,12 @@ from langchain.chains import (
 from langchain_community.document_loaders import TextLoader
 from langchain.chains.question_answering import load_qa_chain
 from langchain.chains.summarize import load_summarize_chain
-from langchain.callbacks import get_openai_callback
-from langchain.callbacks.manager import (
+from langchain_community.callbacks import get_openai_callback
+from langchain_core.callbacks import (
     AsyncCallbackManagerForRetrieverRun,
     CallbackManagerForRetrieverRun,
 )
-from langchain.retrievers import BM25Retriever
+from langchain_community.retrievers import BM25Retriever
 
 from .retriever import (
     get_vdb_multi_query_retriever,
@@ -62,7 +62,7 @@ def qa_vdb_multi_query(_query, _vdb, _chain_type):
             llm,
             chain_type=_chain_type
         )
-        _ans = _qa(
+        _ans = _qa.invoke(
             {
                 "input_documents": _docs,
                 "question": _query
@@ -139,7 +139,7 @@ def qa_vdb_multi_query_textgen(_query, _vdb, _chain_type, _textgen_url):
         chain_type=_chain_type,
         prompt=rag_prompt_yi
     )
-    _ans = _qa(
+    _ans = _qa.invoke(
         {
             "input_documents": _docs,
             "question": _query
@@ -174,7 +174,7 @@ def qa_docs_ensemble_query(_query, _docs, _chain_type):
             llm,
             chain_type=_chain_type
         )
-        _ans = _qa(
+        _ans = _qa.invoke(
             {
                 "input_documents": _docs,
                 "question": _query
@@ -206,7 +206,7 @@ def qa_docs_parent_query(_query, _docs, _chain_type):
             llm,
             chain_type=_chain_type
         )
-        _ans = _qa(
+        _ans = _qa.invoke(
             {
                 "input_documents": _docs,
                 "question": _query

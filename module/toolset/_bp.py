@@ -6,10 +6,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.schema import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
-from module._const import WORKSPACE_TOOLSET
-from module._log import logger_toolset
+from .._const import WORKSPACE_TOOLSET
+from .._log import logger_toolset
 from module.rag.vdb_faiss import (
     get_faiss_OpenAI,
     get_faiss_HuggingFace,

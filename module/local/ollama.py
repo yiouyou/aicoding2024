@@ -3,7 +3,7 @@ from typing import Any, AsyncIterator, Dict, Iterator, List, Mapping, Optional
 
 import aiohttp
 import requests
-from langchain_core.callbacks import (
+from langchain_core.callbacks.manager import (
     AsyncCallbackManagerForLLMRun,
     CallbackManagerForLLMRun,
 )

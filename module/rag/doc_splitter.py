@@ -1,4 +1,4 @@
-from module._log import logger_rag
+from .._log import logger_rag
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.text_splitter import MarkdownHeaderTextSplitter

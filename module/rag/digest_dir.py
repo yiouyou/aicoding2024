@@ -1,5 +1,5 @@
-from module._const import WORKSPACE_RAG
-from module._log import logger_rag
+from .._const import WORKSPACE_RAG
+from .._log import logger_rag
 
 from .doc_loader import clean_txt
 from .doc_splitter import (

@@ -40,7 +40,7 @@ from langchain.chains import (
 )
 from langchain.chains import LLMChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
 import fitz
 from PIL import Image

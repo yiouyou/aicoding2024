@@ -1,5 +1,5 @@
-from module._const import WORKSPACE_TOOLSET
-from module._log import logger_toolset
+from .._const import WORKSPACE_TOOLSET
+from .._log import logger_toolset
 
 import scrapetube
 from youtube_transcript_api import YouTubeTranscriptApi

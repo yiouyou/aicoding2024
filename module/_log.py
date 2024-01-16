@@ -1,6 +1,6 @@
 import sys
 from loguru import logger
-from module._const import LOG_MODULE
+from ._const import LOG_MODULE
 
 
 logger.remove()
@@ -14,5 +14,6 @@ logger.add(LOG_MODULE, level='DEBUG', format=_format, filter=lambda x: x["extra"
 
 
 logger_module = logger.bind(job="module")
+
 logger_rag = logger_module
 

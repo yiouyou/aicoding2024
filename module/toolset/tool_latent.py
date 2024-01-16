@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.schema import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
 
 ACTIVE_LATENT_TEMPLATE = """# MISSION

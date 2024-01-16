@@ -6,11 +6,11 @@ from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptT
 from langchain.schema import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 , RunnableLambda
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 from langchain import hub
 
-from module._log import logger_toolset
+from .._log import logger_toolset
 
 
 def stepback_question(_question):

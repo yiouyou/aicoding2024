@@ -1,6 +1,6 @@
-from module._log import logger_rag
+from .._log import logger_rag
 
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 
@@ -8,16 +8,16 @@ from langchain_core.prompts import PromptTemplate
 from langchain.output_parsers import PydanticOutputParser
 
 from langchain.retrievers import (
-    BM25Retriever,
     EnsembleRetriever,
     ParentDocumentRetriever,
     ContextualCompressionRetriever,
 )
+from langchain_community.retrievers import BM25Retriever
 from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain.retrievers.merger_retriever import MergerRetriever
 from langchain.retrievers.document_compressors import DocumentCompressorPipeline
 
-from langchain.document_transformers import (
+from langchain_community.document_transformers  import (
     LongContextReorder,
     EmbeddingsRedundantFilter,
     EmbeddingsClusteringFilter,

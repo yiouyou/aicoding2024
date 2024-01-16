@@ -5,8 +5,8 @@ from langchain_community.document_loaders.parsers import OpenAIWhisperParser #, 
 from langchain_community.document_loaders.blob_loaders.youtube_audio import YoutubeAudioLoader
 from langchain_community.document_loaders import AZLyricsLoader
 
-from module._const import WORKSPACE_TOOLSET
-from module._log import logger_toolset
+from .._const import WORKSPACE_TOOLSET
+from .._log import logger_toolset
 import scrapetube
 import os
 

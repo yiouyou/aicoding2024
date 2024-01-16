@@ -4,7 +4,7 @@ from typing import Any, AsyncIterator, Dict, Iterator, List, Optional
 
 import requests
 
-from langchain.callbacks.manager import (
+from langchain_core.callbacks.manager import (
     AsyncCallbackManagerForLLMRun,
     CallbackManagerForLLMRun,
 )
