@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "aicoding2024"
+version = "0.1.0"
+description = ""
+authors = ["yiouyou <zhuosong@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+unstructured = "^0.12.0"
+semantic-router = {extras = ["local"], version = "^0.0.16"}
+
+[tool.poetry.group.dev.dependencies]
+langchain = "^0.1.0"
+openai = "^1.7.2"
+python-dotenv = "^1.0.0"
+bs4 = "^0.0.1"
+semantic-router = {extras = ["local"], version = "^0.0.16"}
+llama-cpp-python = "^0.2.29"
+tzdata = "^2023.4"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/nightly/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
