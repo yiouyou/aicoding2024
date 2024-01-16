@@ -1,4 +1,8 @@
 langchain
 openai
+python-dotenv
 bs4
 unstructured
+semantic-router[local]
+llama-cpp-python
+tzdata
