@@ -8,6 +8,12 @@ authors = ["yiouyou <zhuosong@gmail.com>"]
 python = ">=3.10,<3.12"
 unstructured = "^0.12.0"
 semantic-router = {extras = ["local"], version = "^0.0.16"}
+loguru = "^0.7.2"
+langchain-openai = "^0.0.2.post1"
+pandas = "^2.1.4"
+faiss-cpu = "^1.7.4"
+torch = "2.1.2"
+sentence-transformers = "^2.2.2"
 
 [tool.poetry.group.dev.dependencies]
 langchain = "^0.1.0"
@@ -20,7 +26,7 @@ tzdata = "^2023.4"
 
 [[tool.poetry.source]]
 name = "pytorch-gpu-src"
-url = "https://download.pytorch.org/whl/nightly/cu121"
+url = "https://download.pytorch.org/whl/cu118"
 priority = "explicit"
 
 [build-system]
