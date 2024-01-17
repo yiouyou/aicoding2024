@@ -7,20 +7,21 @@ authors = ["yiouyou <zhuosong@gmail.com>"]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 unstructured = "^0.12.0"
-semantic-router = {extras = ["local"], version = "^0.0.16"}
 loguru = "^0.7.2"
 langchain-openai = "^0.0.2.post1"
 pandas = "^2.1.4"
 faiss-cpu = "^1.7.4"
-torch = "2.1.2"
+torch = {version = "2.0.1+cu118", source = "pytorch-gpu-src"}
 sentence-transformers = "^2.2.2"
+torchvision = {version = "0.15.2+cu118", source = "pytorch-gpu-src"}
+python-dotenv = "^1.0.0"
+crewai = "^0.1.32"
 
 [tool.poetry.group.dev.dependencies]
 langchain = "^0.1.0"
 openai = "^1.7.2"
 python-dotenv = "^1.0.0"
 bs4 = "^0.0.1"
-semantic-router = {extras = ["local"], version = "^0.0.16"}
 llama-cpp-python = "^0.2.29"
 tzdata = "^2023.4"
 

@@ -1,4 +1,5 @@
 bs4
+crewai
 faiss-cpu
 langchain
 langchain_openai
