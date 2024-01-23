@@ -1,6 +1,4 @@
 bs4
-crewai
-datasets
 faiss-cpu
 huggingface_hub
 langchain
@@ -16,7 +14,6 @@ matplotlib
 openai
 pandas
 python-dotenv
-semantic-router[local]
 sentence-transformers
 tzdata
 unstructured
