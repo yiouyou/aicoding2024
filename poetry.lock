@@ -391,23 +391,6 @@ files = [
 ]
 
 [[package]]
-name = "crewai"
-version = "0.1.32"
-description = "Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
-optional = false
-python-versions = ">=3.9,<4.0"
-files = [
-    {file = "crewai-0.1.32-py3-none-any.whl", hash = "sha256:c111ff463b15066689ef95d251cc9127fab757bc5de7302783cdf1f83ebf0c45"},
-    {file = "crewai-0.1.32.tar.gz", hash = "sha256:751adfd1efa59e52e0d273fb3a4403d0491eab9f0d682779d29d2990088f321b"},
-]
-
-[package.dependencies]
-langchain = ">=0.1.0,<0.2.0"
-langchain-openai = ">=0.0.2,<0.0.3"
-openai = ">=1.7.1,<2.0.0"
-pydantic = ">=2.4.2,<3.0.0"
-
-[[package]]
 name = "dataclasses-json"
 version = "0.6.3"
 description = "Easily serialize dataclasses to and from JSON."
@@ -1008,6 +991,20 @@ files = [
 
 [package.dependencies]
 six = "*"
+
+[[package]]
+name = "langgraph"
+version = "0.0.13"
+description = "langgraph"
+optional = false
+python-versions = ">=3.9.0,<4.0"
+files = [
+    {file = "langgraph-0.0.13-py3-none-any.whl", hash = "sha256:332eaaa98d1b05de6f224d21271cc95a85fdd37d6cf0a4a141d34234bfae3e20"},
+    {file = "langgraph-0.0.13.tar.gz", hash = "sha256:516b0edfa989d9863512cb2ed78d18cc1489238a5408bac1550c5d1c250d650b"},
+]
+
+[package.dependencies]
+langchain-core = ">=0.1.8,<0.2.0"
 
 [[package]]
 name = "langsmith"
@@ -3306,4 +3303,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "369332db29109caf39f967d38037dc7ff86c68f76e1bc9fc3400ed4f021fa30b"
+content-hash = "a2065382f6d777579520467ae2bb07f460d25edeec81e804a7530cb82d3df102"

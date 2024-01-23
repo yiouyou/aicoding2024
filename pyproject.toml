@@ -15,7 +15,7 @@ torch = {version = "2.0.1+cu118", source = "pytorch-gpu-src"}
 sentence-transformers = "^2.2.2"
 torchvision = {version = "0.15.2+cu118", source = "pytorch-gpu-src"}
 python-dotenv = "^1.0.0"
-crewai = "^0.1.32"
+langgraph = "^0.0.13"
 
 [tool.poetry.group.dev.dependencies]
 langchain = "^0.1.0"
